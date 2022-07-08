@@ -24,6 +24,7 @@ public class PauseMenu : MonoBehaviour
             }
             
         }
+        
     }
 
     public void Resume()
@@ -44,4 +45,6 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+    
 }
