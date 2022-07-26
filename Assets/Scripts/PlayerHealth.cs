@@ -46,7 +46,7 @@ public class PlayerHealth : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			//Debug.Log("Player took damage!");
-			TakeDamage(50);
+			TakeDamage(20);
 		}
 
 		
