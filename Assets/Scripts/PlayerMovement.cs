@@ -12,7 +12,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
-    
+    public VectorValue startingPosition;
+
+    // Use this for initialization
+    void Start()
+    {
+        transform.position = startingPosition.initialValue;
+    }
 
     // Update is called once per frame
     void Update()
