@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public VectorValue startingPosition;
 
-    // Use this for initialization
+    // Runs on the first frame
     void Start()
     {
         transform.position = startingPosition.initialValue;
@@ -41,5 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
+    
 
 }

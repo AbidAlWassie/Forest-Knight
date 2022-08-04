@@ -23,6 +23,8 @@ public class FetchData : MonoBehaviour
 
         Vector2 LoadPositon = new Vector2(x, y);
         transform.position = LoadPositon;
+
+
     }
 
     //public void PlayGame()
@@ -33,7 +35,7 @@ public class FetchData : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("OnEnable");
+        //Debug.Log("OnEnable");
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -41,7 +43,7 @@ public class FetchData : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadPlayer();
-        Debug.Log("OnSceneLoaded: " + scene.name);
+        Debug.Log("Scene Loaded: " + scene.name);
         //Debug.Log(mode);
     }
 
