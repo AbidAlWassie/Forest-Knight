@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 326b709dbdf943c42b36591a2dd97311, type: 3}
+  m_Name: Health Potion
+  m_EditorClassIdentifier: 
+  itemName: Health Potion
+  itemDescription: Restores 20 points of health.
+  itemImage: {fileID: 26583619, guid: 3885bba756145cc42b9d35ac57de6533, type: 3}
+  numberHeld: 5
+  unsable: 1
+  unique: 0
