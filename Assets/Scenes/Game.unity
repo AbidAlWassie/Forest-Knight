@@ -115300,10 +115300,10 @@ RectTransform:
   m_Father: {fileID: 1170846960}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22.547}
-  m_SizeDelta: {x: -267.6016, y: -67.4059}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -22.546997}
+  m_SizeDelta: {x: 832.39844, y: 512.5941}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949183335
 MonoBehaviour:
@@ -115356,10 +115356,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: ca47601c62141814284db09d37293ded, type: 2}
-  blankInventorySlot: {fileID: 7557316131359750592, guid: e6063c430798d4f408a931aa8f1e79a9, type: 3}
+  blankInventorySlot: {fileID: 4515210322709163297, guid: 1c70b10f056118143a6bb416bc53dafb, type: 3}
   inventoryPanel: {fileID: 2001136693}
   descriptionText: {fileID: 630940622}
   useButton: {fileID: 1288937805}
+  currentItem: {fileID: 0}
 --- !u!1 &965708322
 GameObject:
   m_ObjectHideFlags: 0
@@ -115981,7 +115982,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8950086, y: 1}
+    m_SensorSize: {x: 1.8846816, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
