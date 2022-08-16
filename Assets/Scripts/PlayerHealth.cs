@@ -6,32 +6,22 @@ using System;
 public class PlayerHealth : MonoBehaviour
 {
 
-	public static event Action OnPlayerDeath;
-
-	public int maxHealth = 100;
-	public int currentHealth;
-
 	public HealthBar healthBar;
 
-	public static bool GameIsPaused = false;
-
+    public static event Action OnPlayerDeath;
+    public static bool GameIsPaused = false;
 	public GameObject gameoverMenuUI;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		currentHealth = maxHealth;
-		healthBar.SetMaxHealth(maxHealth);
-	}
+	public FloatValue health, maxHealth;
 
-
+	
 
 	void LoadGame()
 	{
 		gameoverMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GameIsPaused = false;
-		currentHealth = maxHealth;
+		//currentHealth = maxHealth;
 	}
 
 	void Gameover()
@@ -45,25 +35,45 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			//Debug.Log("Player took damage!");
 			TakeDamage(20);
 		}
-
 		
 	}
 
-	void TakeDamage(int damage)
+	public void TakeDamage(float damage)
 	{
-		currentHealth -= damage;
 
-		healthBar.SetHealth(currentHealth);
+		//Debug.Log("curr health" + health.value + " & " + damage);
+		health.value -= damage;
+        if (health.value <= 0)
+        {
+			health.value = 0;
+            OnPlayerDeath?.Invoke();
+            Debug.Log("Gameover!");
+        }
+    }
 
-		if (currentHealth <= 0)
-		{
-			currentHealth = 0;
+	//Old
+	//void TakeDamage(int damage)
+	//{
+	//    currentHealth.initialValue -= damage;
 
-			OnPlayerDeath?.Invoke();
-			Debug.Log("Gameover!");
-		}
-	}
+	//    healthBar.SetHealth(100);
+
+	//    if (currentHealth.initialValue <= 0)
+	//    {
+	//        currentHealth.initialValue = 0;
+
+	//        OnPlayerDeath?.Invoke();
+	//        Debug.Log("Gameover!");
+	//    }
+	//}
+
+	// Start is called before the first frame update
+	//   void Start()
+	//{
+	//	//currentHealth = maxHealth;
+	//	//healthBar.SetMaxHealth(maxHealth);
+	//}
+
 }

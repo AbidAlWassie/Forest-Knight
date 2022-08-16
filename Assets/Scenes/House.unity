@@ -1544,9 +1544,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277143423632369094, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+    - target: {fileID: 1277143423632369094, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1800919173}
+    - target: {fileID: 1277143423632369094, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
     - target: {fileID: 1277143423632369094, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: gameoverMenuUI
       value: 
@@ -3980,6 +3988,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4102654934725763430, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: MaxHealth.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
+    - target: {fileID: 4102654934725763430, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: CurrentHealth.Variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+    - target: {fileID: 4102654935820298664, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+    - target: {fileID: 4102654935820298664, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
     - target: {fileID: 4102654935820298666, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
