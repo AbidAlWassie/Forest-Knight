@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Trainer Sword
   itemDescription: The sword was used by a soldier in his training days.
-  itemImage: {fileID: 1392574849, guid: 3885bba756145cc42b9d35ac57de6533, type: 3}
+  itemImage: {fileID: -2105910930, guid: 2138bad3ad51df94a9daf00638774cf7, type: 3}
   numberHeld: 1
-  unsable: 0
+  usable: 0
   unique: 1
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []

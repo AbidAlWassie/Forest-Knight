@@ -23,8 +23,6 @@ public class FetchData : MonoBehaviour
 
         Vector2 LoadPositon = new Vector2(x, y);
         transform.position = LoadPositon;
-
-
     }
 
     //public void PlayGame()

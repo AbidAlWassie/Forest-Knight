@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Health Potion
   itemDescription: Restores 20 points of health.
-  itemImage: {fileID: 26583619, guid: 3885bba756145cc42b9d35ac57de6533, type: 3}
+  itemImage: {fileID: -125438356, guid: 2138bad3ad51df94a9daf00638774cf7, type: 3}
   numberHeld: 5
   usable: 1
   unique: 0
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []
