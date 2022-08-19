@@ -7,6 +7,8 @@ public class FetchData : MonoBehaviour
 {
     public float x, y;
 
+    public FloatValue currentHealth, maxHealth;
+
     public void SavePlayer()
     {
         x = transform.position.x;
@@ -14,6 +16,7 @@ public class FetchData : MonoBehaviour
 
         PlayerPrefs.SetFloat("x", x);
         PlayerPrefs.SetFloat("y", y);
+        PlayerPrefs.SetFloat("playerHealth", currentHealth.value);
     }
 
     public void LoadPlayer()

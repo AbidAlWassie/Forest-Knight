@@ -53,27 +53,4 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-	//Old
-	//void TakeDamage(int damage)
-	//{
-	//    currentHealth.initialValue -= damage;
-
-	//    healthBar.SetHealth(100);
-
-	//    if (currentHealth.initialValue <= 0)
-	//    {
-	//        currentHealth.initialValue = 0;
-
-	//        OnPlayerDeath?.Invoke();
-	//        Debug.Log("Gameover!");
-	//    }
-	//}
-
-	// Start is called before the first frame update
-	//   void Start()
-	//{
-	//	//currentHealth = maxHealth;
-	//	//healthBar.SetMaxHealth(maxHealth);
-	//}
-
 }
