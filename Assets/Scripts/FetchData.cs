@@ -44,13 +44,13 @@ public class FetchData : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadPlayer();
-        Debug.Log("Scene Loaded: " + scene.name);
+        //Debug.Log("Scene Loaded: " + scene.name);
         //Debug.Log(mode);
     }
 
     void OnDisable()
     {
-        Debug.Log("OnDisable");
+        //Debug.Log("OnDisable");
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
