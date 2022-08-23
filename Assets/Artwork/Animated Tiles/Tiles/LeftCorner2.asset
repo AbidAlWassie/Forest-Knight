@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LeftCorner2
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1408354379, guid: d6eef911da8675b48ae6ab997ed52239, type: 3}
-  - {fileID: 220565100, guid: 8bbb47602bdabaf4eb23744186b62e9c, type: 3}
+  - {fileID: 1992414, guid: 50d84a669a3f0604a8fd743269b7fe03, type: 3}
+  - {fileID: -1531577859, guid: e639a74d51023a74bbd60094d13380e9, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 0
+  m_TileColliderType: 2
