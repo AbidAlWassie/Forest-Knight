@@ -121,8 +121,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 20
-  m_LinearDrag: 5
-  m_AngularDrag: 2
+  m_LinearDrag: 50
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  petName: Edwin
+  petName: 
   target: {fileID: 0}
   animator: {fileID: 435311115352989542}
   rb: {fileID: 435311115352989541}

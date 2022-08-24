@@ -24,7 +24,7 @@ public class Cat : Animal
 
     public void DetectPlayer()
     {
-        if (Vector3.Distance(target.position, transform.position) <= detectionRadius)
+        if (Vector3.Distance(target.position, transform.position) <= detectionRadius && Vector3.Distance(target.position, transform.position) > stopRadius)
         {
             //transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
             Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);

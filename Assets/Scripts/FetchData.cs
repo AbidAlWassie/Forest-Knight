@@ -16,7 +16,7 @@ public class FetchData : MonoBehaviour
 
         PlayerPrefs.SetFloat("x", x);
         PlayerPrefs.SetFloat("y", y);
-        PlayerPrefs.SetFloat("playerHealth", currentHealth.value);
+        //PlayerPrefs.SetFloat("playerHealth", currentHealth.value);
     }
 
     public void LoadPlayer()
@@ -28,15 +28,14 @@ public class FetchData : MonoBehaviour
         transform.position = LoadPositon;
     }
 
-    //public void PlayGame()
-    //{
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    //}
+    void Start()
+    {
+        //LoadPlayer();
+    }
 
 
     void OnEnable()
     {
-        //Debug.Log("OnEnable");
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -44,13 +43,10 @@ public class FetchData : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         LoadPlayer();
-        //Debug.Log("Scene Loaded: " + scene.name);
-        //Debug.Log(mode);
     }
 
     void OnDisable()
     {
-        //Debug.Log("OnDisable");
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
