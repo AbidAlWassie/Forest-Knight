@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Cat : Animal
 {
     public float detectionRadius;
     public float stopRadius;
     public Transform normalBehavior;
+
+    public float relationPoints;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawLine(transform.position, target.position);
+
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,11 +36,9 @@ public class Cat : Animal
     {
         if (Vector3.Distance(target.position, transform.position) <= detectionRadius && Vector3.Distance(target.position, transform.position) > stopRadius)
         {
-            //transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            ChangeDirection(temp - transform.position);
-            rb.MovePosition(temp); 
-        } else
+            checkRelation();
+        }
+        else
         {
             catIdle();
         }
@@ -65,6 +73,33 @@ public class Cat : Animal
             }
         }
         catWalk(direction);
+    }
+
+    public void checkRelation()
+    {
+        if (relationPoints <= 0)
+        {
+            moveAwayFromPlayer();
+        }
+        else if (relationPoints >= 1)
+        {
+            followPlayer();
+        }
+    }
+
+    public void moveAwayFromPlayer()
+    {
+        Vector3 direction = Vector3.MoveTowards(transform.position, target.position, -1 * moveSpeed * Time.deltaTime);
+        ChangeDirection(direction - transform.position);
+        rb.MovePosition(direction);
+        stopRadius = 0;
+    }
+
+    public void followPlayer()
+    {
+        Vector3 direction = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        ChangeDirection(direction - transform.position);
+        rb.MovePosition(direction);
     }
 
     public void catIdle()
