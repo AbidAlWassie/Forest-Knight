@@ -16,13 +16,15 @@ public class FetchData : MonoBehaviour
 
         PlayerPrefs.SetFloat("x", x);
         PlayerPrefs.SetFloat("y", y);
-        //PlayerPrefs.SetFloat("playerHealth", currentHealth.value);
+        PlayerPrefs.SetFloat("playerHealth", currentHealth.value);
     }
 
     public void LoadPlayer()
     {
         x = PlayerPrefs.GetFloat("x");
         y = PlayerPrefs.GetFloat("y");
+
+        currentHealth.value = PlayerPrefs.GetFloat("playerHealth");
 
         Vector2 LoadPositon = new Vector2(x, y);
         transform.position = LoadPositon;

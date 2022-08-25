@@ -33,11 +33,14 @@ public class PlayerHealth : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Player"))
+		if (other.CompareTag("Player") && CompareTag("Danger"))
 		{
 			TakeDamage(20);
 		}
-		
+		else if (other.CompareTag("Player") && CompareTag("Heal"))
+		{
+			RestoreHealth(20);
+		}
 	}
 
 	public void TakeDamage(float damage)
@@ -52,5 +55,17 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Gameover!");
         }
     }
+
+	public void RestoreHealth (float heal)
+	{
+
+		//Debug.Log("curr health" + health.value + " & " + damage);
+		health.value += heal;
+		if (health.value >= maxHealth.value)
+		{
+			health.value = maxHealth.value;
+			Debug.Log("Health Restored!");
+		}
+	}
 
 }

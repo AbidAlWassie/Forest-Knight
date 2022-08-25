@@ -9,15 +9,6 @@ public class Cat : Animal
 
     public float relationPoints;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-
-        Gizmos.DrawLine(transform.position, target.position);
-
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -115,5 +106,12 @@ public class Cat : Animal
         animator.SetFloat("Speed", direction.sqrMagnitude);
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+
+        Gizmos.DrawLine(transform.position, target.position);
+
+    }
 
 }
