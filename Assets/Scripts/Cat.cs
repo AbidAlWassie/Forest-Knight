@@ -9,18 +9,26 @@ public class Cat : Animal
 
     public float relationPoints;
 
+    //public Transform[] moveSpot;
+
+    //private int randomSpot;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         animator.SetBool("Idle", true);
+
+        //randomSpot = Random.Range(0, moveSpot.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
         DetectPlayer();
+
+        //transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
     }
 
     public void DetectPlayer()
@@ -43,11 +51,13 @@ public class Cat : Animal
             if (direction.x > 0)
             {
                 direction.x = 1;
+                direction.y = 0;
             }
 
             else if (direction.x < 0)
             {
                 direction.x = -1;
+                direction.y = 0;
             }
 
         }
@@ -55,11 +65,13 @@ public class Cat : Animal
         {
             if (direction.y > 0)
             {
+                direction.x = 0;
                 direction.y = 1;
             }
 
             else if (direction.y < 0)
             {
+                direction.x = 0;
                 direction.y = -1;
             }
         }
@@ -83,7 +95,9 @@ public class Cat : Animal
         Vector3 direction = Vector3.MoveTowards(transform.position, target.position, -1 * moveSpeed * Time.deltaTime);
         ChangeDirection(direction - transform.position);
         rb.MovePosition(direction);
+        detectionRadius = 10;
         stopRadius = 0;
+        moveSpeed = 30;
     }
 
     public void followPlayer()

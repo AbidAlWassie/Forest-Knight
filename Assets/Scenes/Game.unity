@@ -10921,7 +10921,7 @@ PrefabInstance:
       objectReference: {fileID: 947410036}
     - target: {fileID: 435311115352989539, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: relationPoints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 435311115352989539, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: detectionRadius
@@ -124333,7 +124333,7 @@ PrefabInstance:
       objectReference: {fileID: 947410036}
     - target: {fileID: 435311115352989539, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: relationPoints
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 435311115352989539, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: detectionRadius
@@ -124791,7 +124791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8915663, y: 1}
+    m_SensorSize: {x: 1.9122807, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
