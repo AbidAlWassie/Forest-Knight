@@ -1543,6 +1543,14 @@ PrefabInstance:
       propertyPath: y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1277143423632369092, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: maxHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
+    - target: {fileID: 1277143423632369092, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: currentHealth
+      value: 
+      objectReference: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
     - target: {fileID: 1277143423632369094, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: health
       value: 

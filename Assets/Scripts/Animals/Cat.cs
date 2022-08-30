@@ -115,9 +115,7 @@ public class Cat : Animal
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-
         Gizmos.DrawLine(transform.position, target.position);
-
     }
 
 }
