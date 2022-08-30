@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0f39a9205e4394ee1b6ba8269428d176, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12dcfec551cda3143a8141b87dc8e2f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1277143423632369097}
   animator: {fileID: 1277143423632369099}
+  startingPosition: {fileID: 0}
 --- !u!95 &1277143423632369099
 Animator:
   serializedVersion: 4
@@ -176,6 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
+  currentHealth: {fileID: 0}
+  maxHealth: {fileID: 0}
 --- !u!114 &1277143423632369094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb34b756a899b614d9424135ecfb6d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
   healthBar: {fileID: 0}
   gameoverMenuUI: {fileID: 0}
+  health: {fileID: 0}
+  maxHealth: {fileID: 0}

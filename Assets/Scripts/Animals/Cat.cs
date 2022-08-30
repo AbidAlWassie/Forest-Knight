@@ -9,26 +9,18 @@ public class Cat : Animal
 
     public float relationPoints;
 
-    //public Transform[] moveSpot;
-
-    //private int randomSpot;
-
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         animator.SetBool("Idle", true);
-
-        //randomSpot = Random.Range(0, moveSpot.Length);
     }
 
     // Update is called once per frame
     void Update()
     {
         DetectPlayer();
-
-        //transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
     }
 
     public void DetectPlayer()
