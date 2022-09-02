@@ -2,7 +2,7 @@
 
 #### It's a early work in progress game.
 
-#### I replaced every tilemap and sprites expect for the player sprites.
+#### I replaced every tilemap and sprites.
 
 [Watch Progress Video](https://youtu.be/8XxBJzVCvOM)
 
