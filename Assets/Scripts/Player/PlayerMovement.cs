@@ -5,6 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public enum PlayerState
+    {
+        idle,
+        walk,
+        interact,
+        attack
+    }
+
+    public PlayerState currentState;
+
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
@@ -35,11 +45,26 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
             animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
         }
+
+        if(Input.GetButtonDown("Attack") && currentState != PlayerState.attack) {
+            StartCoroutine(PlayerAttack());
+            Debug.Log(currentState);
+        }
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private IEnumerator PlayerAttack()
+    {
+        animator.SetBool("Attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        animator.SetBool("Attacking", false);
+        yield return new WaitForSeconds(.33f);
+        currentState = PlayerState.walk;
     }
 
     

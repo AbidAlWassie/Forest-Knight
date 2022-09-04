@@ -128609,6 +128609,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1277143423632369098, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: currentState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277143423632369098, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: startingPosition
       value: 
       objectReference: {fileID: 11400000, guid: 49026d8b1f98e884fb06391e11939866, type: 2}
