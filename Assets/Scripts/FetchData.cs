@@ -30,11 +30,6 @@ public class FetchData : MonoBehaviour
         transform.position = LoadPositon;
     }
 
-    void Start()
-    {
-        //LoadPlayer();
-    }
-
 
     void OnEnable()
     {

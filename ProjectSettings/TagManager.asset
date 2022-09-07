@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Danger
   - Heal
+  - Breakable
   layers:
   - Default
   - TransparentFX
