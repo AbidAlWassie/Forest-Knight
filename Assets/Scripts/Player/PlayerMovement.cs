@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
         idle,
         walk,
         interact,
-        attack
+        attack,
+        fishing
     }
 
     public PlayerState currentState;
@@ -36,19 +37,31 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
+        //Debug.Log(currentState);
+
         if (currentState == PlayerState.interact)
         {
             return;
         }
 
 
-        else if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack) {
+        else if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.fishing) {
             StartCoroutine(PlayerAttack());
-            //Debug.Log(currentState);
+            Debug.Log(currentState);
         }
 
-        else if (currentState == PlayerState.walk)
+        else if (Input.GetButtonDown("Fishing") && currentState != PlayerState.fishing) {
+            StartCoroutine(EnterFishing());
+            Debug.Log(currentState);
+        }
+
+        else if (Input.GetButtonDown("Fishing") && currentState == PlayerState.fishing)
         {
+            StartCoroutine(ExitFishing());
+            Debug.Log(currentState);
+        }
+
+        else if (currentState == PlayerState.walk) {
             UpdateAnimation();
         }
 
@@ -62,8 +75,6 @@ public class PlayerMovement : MonoBehaviour
         if (movement != Vector2.zero)
         {
             UpdateMovement();
-            //movement.x = Mathf.Round(movement.x);
-            //movement.y = Mathf.Round(movement.y);
 
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
@@ -79,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("Moving", false);
-        }  
+        }
     }
 
     void UpdateMovement()
@@ -95,6 +106,22 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.6f);
+        moveSpeed = 5f;
+        currentState = PlayerState.walk;
+    }
+
+    private IEnumerator EnterFishing()
+    {
+        animator.SetBool("Fishing", true);
+        moveSpeed = 0;
+        currentState = PlayerState.fishing;
+        yield return null;
+    }
+
+    private IEnumerator ExitFishing()
+    {
+        animator.SetBool("Fishing", false);
+        yield return null;
         moveSpeed = 5f;
         currentState = PlayerState.walk;
     }
