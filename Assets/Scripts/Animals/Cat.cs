@@ -9,18 +9,56 @@ public class Cat : Animal
 
     public float relationPoints;
 
+    public Transform[] moveSpot;
+    private int randomSpot;
+    public float waitTime;
+    public float startWaitTime;
+
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         animator.SetBool("Idle", true);
+        randomSpot = Random.Range(0, moveSpot.Length);
+        moveSpeed = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //catRandomMove();
         DetectPlayer();
+        //CheckState();
+
+    }
+
+    //void CheckState()
+    //{
+
+    //}
+
+    void catRandomMove()
+    {
+        if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) < 0.2f)
+        {
+            if (waitTime <= 0)
+            {
+                randomSpot = Random.Range(0, moveSpot.Length);
+                waitTime = startWaitTime;
+                catIdle();
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
+                catMove();
+            }
+        }
+
+        Vector3 direction = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
+
+        ChangeDirection(direction - transform.position);
+        rb.MovePosition(direction);
     }
 
     public void DetectPlayer()
@@ -31,7 +69,8 @@ public class Cat : Animal
         }
         else
         {
-            catIdle();
+            catRandomMove();
+            //catIdle();
         }
     }
 
@@ -68,6 +107,7 @@ public class Cat : Animal
             }
         }
         catWalk(direction);
+        
     }
 
     public void checkRelation()
@@ -104,6 +144,11 @@ public class Cat : Animal
         animator.SetBool("Idle", true);
     }
 
+    public void catMove()
+    {
+        animator.SetBool("Idle", false);
+    }
+
     public void catWalk(Vector2 direction)
     {
         animator.SetBool("Idle", false);
@@ -112,10 +157,10 @@ public class Cat : Animal
         animator.SetFloat("Speed", direction.sqrMagnitude);
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, target.position);
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.blue;
+    //    Gizmos.DrawLine(transform.position, target.position);
+    //}
 
 }

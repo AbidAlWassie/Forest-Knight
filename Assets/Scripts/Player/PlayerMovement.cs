@@ -33,11 +33,9 @@ public class PlayerMovement : MonoBehaviour
         transform.position = startingPosition.initialValue;
     }
 
-    // Update is called once per frame
+    // Runs on every frame
     void Update()
     {
-
-        //Debug.Log(currentState);
 
         if (currentState == PlayerState.interact)
         {
@@ -69,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
     }
+
 
     void UpdateAnimation()
     {
@@ -121,9 +120,9 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator ExitFishing()
     {
         animator.SetBool("Fishing", false);
-        yield return null;
         moveSpeed = 5f;
         currentState = PlayerState.walk;
+        yield return null;
     }
 
 }

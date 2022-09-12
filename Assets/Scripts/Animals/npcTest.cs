@@ -19,6 +19,11 @@ public class npcTest : NPC
     // Update is called once per frame
     void Update()
     {
+        npcWalk();
+    }
+
+    void npcWalk()
+    {
         transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) < 0.2f)
@@ -27,7 +32,8 @@ public class npcTest : NPC
             {
                 randomSpot = Random.Range(0, moveSpot.Length);
                 waitTime = startWaitTime;
-            } else
+            }
+            else
             {
                 waitTime -= Time.deltaTime;
             }
