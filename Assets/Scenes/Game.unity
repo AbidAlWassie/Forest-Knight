@@ -124502,7 +124502,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 1}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &965708322
 GameObject:
@@ -128344,6 +128344,14 @@ PrefabInstance:
     - target: {fileID: 435311115352989541, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: m_AngularDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435311115352989541, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435311115352989541, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 435311115352989543, guid: ab1f72abbdbe8d94383fac170ad7e831, type: 3}
       propertyPath: m_RootOrder

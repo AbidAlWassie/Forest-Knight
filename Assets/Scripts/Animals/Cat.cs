@@ -63,10 +63,18 @@ public class Cat : Animal
 
     public void DetectPlayer()
     {
-        if (Vector3.Distance(target.position, transform.position) <= detectionRadius && Vector3.Distance(target.position, transform.position) > stopRadius)
+        if (Vector3.Distance(target.position, transform.position) <= detectionRadius && Vector3.Distance(target.position, transform.position) >= stopRadius)
         {
+            print(Vector3.Distance(target.position, transform.position));
             checkRelation();
         }
+
+        else if (Vector3.Distance(target.position, transform.position) <= 1.05)
+        {
+            animator.SetBool("Idle", false);
+            animator.SetFloat("Speed", 0);
+        }
+
         else
         {
             catRandomMove();
