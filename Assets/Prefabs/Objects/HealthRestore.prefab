@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 443298078703899043}
   - component: {fileID: 443298078703899040}
   - component: {fileID: 443298078703899041}
-  - component: {fileID: 443298078703899042}
+  - component: {fileID: -1821655007331728685}
   m_Layer: 0
   m_Name: HealthRestore
   m_TagString: Heal
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9a8e023b5e66b0d478386a07d1627765, type: 3}
-  m_Color: {r: 1, g: 0.036946997, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.611718, b: 0.5990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &443298078703899042
+--- !u!114 &-1821655007331728685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,10 +121,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 443298078703899068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb34b756a899b614d9424135ecfb6d17, type: 3}
+  m_Script: {fileID: 11500000, guid: 71faebc75f659f745a29362122469207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
-  gameoverMenuUI: {fileID: 0}
-  health: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+  lootItemSignal: {fileID: 11400000, guid: 7ae6f64004db2394fac06d1ab21a5a76, type: 2}
+  currentHealth: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
   maxHealth: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
+  heal: 20

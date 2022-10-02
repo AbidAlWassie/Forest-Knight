@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class HealthRestore : lootItem
 {
-    public GameObject loot;
-
     public FloatValue currentHealth, maxHealth;
     public float heal;
 
@@ -15,7 +12,8 @@ public class HealthRestore : lootItem
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             currentHealth.value += heal;
+            //lootItemSignal.Raise();
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
     }
 }

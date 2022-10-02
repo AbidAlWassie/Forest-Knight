@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b45237ae89561214b977dd26bcd54632, type: 3}
-  m_Name: LogDrop
+  m_Name: NewDrop
   m_EditorClassIdentifier: 
   loots:
   - thisLoot: {fileID: 0}
-    lootChance: 0
+    lootChance: 100
