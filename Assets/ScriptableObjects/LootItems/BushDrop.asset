@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: BushDrop
   m_EditorClassIdentifier: 
   loots:
-  - thisLoot: {fileID: -1821655007331728685, guid: 9efcc487efdb68548a9b34b5f14e36d4, type: 3}
+  - thisLoot: {fileID: 3695469158357106492, guid: db7fb319898b71748935a2fdfd913a4f, type: 3}
+    lootChance: 50
+  - thisLoot: {fileID: -1100164226058269336, guid: 9e21b051b477ae94a803b9c10863fa89, type: 3}
     lootChance: 50
