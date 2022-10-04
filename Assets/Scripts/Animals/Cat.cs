@@ -29,37 +29,8 @@ public class Cat : Animal
     {
         //catRandomMove();
         DetectPlayer();
-        //CheckState();
-
     }
 
-    //void CheckState()
-    //{
-
-    //}
-
-    void catRandomMove()
-    {
-        if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) < 0.2f)
-        {
-            if (waitTime <= 0)
-            {
-                randomSpot = Random.Range(0, moveSpot.Length);
-                waitTime = startWaitTime;
-                catIdle();
-            }
-            else
-            {
-                waitTime -= Time.deltaTime;
-                catMove();
-            }
-        }
-
-        Vector3 direction = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
-
-        ChangeDirection(direction - transform.position);
-        rb.MovePosition(direction);
-    }
 
     public void DetectPlayer()
     {
@@ -78,7 +49,6 @@ public class Cat : Animal
         else
         {
             catRandomMove();
-            //catIdle();
         }
     }
 
@@ -143,6 +113,29 @@ public class Cat : Animal
     public void followPlayer()
     {
         Vector3 direction = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        ChangeDirection(direction - transform.position);
+        rb.MovePosition(direction);
+    }
+
+    void catRandomMove()
+    {
+        if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) < 0.2f)
+        {
+            if (waitTime <= 0)
+            {
+                randomSpot = Random.Range(0, moveSpot.Length);
+                waitTime = startWaitTime;
+                catIdle();
+            }
+            else
+            {
+                waitTime -= Time.deltaTime;
+                catMove();
+            }
+        }
+
+        Vector3 direction = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, moveSpeed * Time.deltaTime);
+
         ChangeDirection(direction - transform.position);
         rb.MovePosition(direction);
     }
