@@ -10,6 +10,7 @@ public class EnterRoom : MonoBehaviour
     public VectorValue playerStorage;
     public bool playerInRange;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))

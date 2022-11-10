@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    Vector2 movement;
+    Vector2 velocity;
 
     public VectorValue startingPosition;
 
@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 5f;
         currentState = PlayerState.walk;
         transform.position = startingPosition.initialValue;
+        velocity = Vector2.down;
     }
 
     // Runs on every frame
@@ -63,28 +64,22 @@ public class PlayerMovement : MonoBehaviour
             UpdateAnimation();
         }
 
-        movement = Vector2.zero;
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        velocity = Vector2.zero;
+        velocity.x = Input.GetAxisRaw("Horizontal");
+        velocity.y = Input.GetAxisRaw("Vertical");
     }
 
 
     void UpdateAnimation()
     {
-        if (movement != Vector2.zero)
+        if (velocity != Vector2.zero)
         {
             UpdateMovement();
 
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
-            animator.SetFloat("Speed", movement.sqrMagnitude);
+            animator.SetFloat("Horizontal", velocity.x);
+            animator.SetFloat("Vertical", velocity.y);
+            animator.SetFloat("Speed", velocity.sqrMagnitude);
             animator.SetBool("Moving", true);
-
-            if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
-            {
-                animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
-                animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
-            }
         } 
         else
         {
@@ -94,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateMovement()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + velocity * moveSpeed * Time.fixedDeltaTime);
     }
 
     private IEnumerator PlayerAttack()
