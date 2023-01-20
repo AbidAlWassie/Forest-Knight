@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: Water Tiles
+  m_Name: Animated Water Tiles
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 1405851774, guid: 50d84a669a3f0604a8fd743269b7fe03, type: 3}
   m_DefaultGameObject: {fileID: 0}

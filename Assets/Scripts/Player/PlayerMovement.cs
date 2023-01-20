@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateMovement()
     {
-        rb.MovePosition(rb.position + velocity * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + velocity.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 
     private IEnumerator PlayerAttack()

@@ -209,7 +209,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1277143423632369097}
   animator: {fileID: 1277143423632369099}
-  startingPosition: {fileID: 0}
+  startingPosition: {fileID: 11400000, guid: 49026d8b1f98e884fb06391e11939866, type: 2}
 --- !u!95 &1277143423632369099
 Animator:
   serializedVersion: 4
@@ -244,8 +244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
-  currentHealth: {fileID: 0}
-  maxHealth: {fileID: 0}
+  currentHealth: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+  maxHealth: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
 --- !u!114 &1277143423632369094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,8 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   gameoverMenuUI: {fileID: 0}
-  health: {fileID: 0}
-  maxHealth: {fileID: 0}
+  health: {fileID: 11400000, guid: 7af603cb02a3d6d4796887bec4217d5d, type: 2}
+  maxHealth: {fileID: 11400000, guid: ecf87b0a3cec260468b26383f160a1c8, type: 2}
 --- !u!1 &3732590415185093041
 GameObject:
   m_ObjectHideFlags: 0

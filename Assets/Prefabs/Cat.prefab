@@ -169,10 +169,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 20
   petName: 
-  target: {fileID: 0}
+  target: {fileID: 1277143423632369096, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
   animator: {fileID: 435311115352989542}
   rb: {fileID: 435311115352989541}
   movement: {x: 0, y: 0}
   detectionRadius: 5
   stopRadius: 1
   normalBehavior: {fileID: 0}
+  relationPoints: 0
+  moveSpot: []
+  waitTime: 0
+  startWaitTime: 0

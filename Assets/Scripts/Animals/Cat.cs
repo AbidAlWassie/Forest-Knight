@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.AI;
 public class Cat : Animal
 {
     public float detectionRadius;
@@ -14,9 +15,15 @@ public class Cat : Animal
     public float waitTime;
     public float startWaitTime;
 
+    //public NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
+        //agent = GetComponent<NavMeshAgent>();
+        //agent.updateRotation = false;
+        //agent.updateUpAxis = false;
+
         target = GameObject.FindWithTag("Player").transform;
         animator = GetComponent<Animator>();
         animator.SetBool("Idle", true);
@@ -27,7 +34,6 @@ public class Cat : Animal
     // Update is called once per frame
     void Update()
     {
-        //catRandomMove();
         DetectPlayer();
     }
 
@@ -105,6 +111,9 @@ public class Cat : Animal
         Vector3 direction = Vector3.MoveTowards(transform.position, target.position, -1 * moveSpeed * Time.deltaTime);
         ChangeDirection(direction - transform.position);
         rb.MovePosition(direction);
+
+        //agent.SetDestination(-1 * target.position);
+
         detectionRadius = 10;
         stopRadius = 0;
         moveSpeed = 30;
@@ -115,6 +124,8 @@ public class Cat : Animal
         Vector3 direction = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         ChangeDirection(direction - transform.position);
         rb.MovePosition(direction);
+        //agent.SetDestination(target.position);
+
     }
 
     void catRandomMove()
