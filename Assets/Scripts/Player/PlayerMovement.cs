@@ -51,13 +51,11 @@ public class PlayerMovement : MonoBehaviour
 
         else if (Input.GetButtonDown("Fishing") && currentState != PlayerState.fishing) {
             StartCoroutine(EnterFishing());
-            Debug.Log(currentState);
         }
 
         else if (Input.GetButtonDown("Fishing") && currentState == PlayerState.fishing)
         {
             StartCoroutine(ExitFishing());
-            Debug.Log(currentState);
         }
 
         else if (currentState == PlayerState.walk) {
@@ -110,6 +108,18 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 0;
         currentState = PlayerState.fishing;
         yield return null;
+        animator.SetBool("Fishing", false);
+        yield return new WaitForSeconds(.6f);
+        moveSpeed = 5f;
+        currentState = PlayerState.walk;
+    }
+
+    private IEnumerator EnterFishingAndStay()
+    {
+        animator.SetBool("Fishing", true);
+        moveSpeed = 0;
+        currentState = PlayerState.fishing;
+        yield return null;
     }
 
     private IEnumerator ExitFishing()
@@ -118,6 +128,23 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 5f;
         currentState = PlayerState.walk;
         yield return null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            print(collision.CompareTag("Water") + " Entered fishing state");
+            StartCoroutine(EnterFishingAndStay());
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            print("Exiting fishing state");
+        }
     }
 
 }
