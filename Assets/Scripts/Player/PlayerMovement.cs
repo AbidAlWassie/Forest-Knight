@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //public int RandNum;
 
     public enum PlayerState
     {
@@ -37,7 +38,8 @@ public class PlayerMovement : MonoBehaviour
     // Runs on every frame
     void Update()
     {
-
+        //RandNum = Random.Range(-1, 2);
+        //Debug.Log(RandNum);
         if (currentState == PlayerState.interact)
         {
             return;
@@ -134,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Water"))
         {
-            print(collision.CompareTag("Water") + " Entered fishing state");
+            //print(collision.CompareTag("Water") + " Entered fishing state");
             StartCoroutine(EnterFishingAndStay());
         }
     }
@@ -143,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("Water"))
         {
-            print("Exiting fishing state");
+            //print("Exiting fishing state");
         }
     }
 

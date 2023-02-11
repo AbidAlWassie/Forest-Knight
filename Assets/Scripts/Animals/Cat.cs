@@ -42,7 +42,7 @@ public class Cat : Animal
     {
         if (Vector3.Distance(target.position, transform.position) <= detectionRadius && Vector3.Distance(target.position, transform.position) >= stopRadius)
         {
-            print(Vector3.Distance(target.position, transform.position));
+            //print(Vector3.Distance(target.position, transform.position));
             checkRelation();
         }
 
@@ -125,7 +125,6 @@ public class Cat : Animal
         ChangeDirection(direction - transform.position);
         rb.MovePosition(direction);
         //agent.SetDestination(target.position);
-
     }
 
     void catRandomMove()
