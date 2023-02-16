@@ -91,7 +91,9 @@ public class Cat : Animal
             }
         }
         catWalk(direction);
-        
+        //animator.SetFloat("LastHorizontal", direction.x);
+        //animator.SetFloat("LastVertical", direction.y);
+        //print(direction);
     }
 
     public void checkRelation()

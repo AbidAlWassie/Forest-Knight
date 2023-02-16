@@ -399,6 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6791560353928170279}
   - component: {fileID: 9839096187436081}
+  - component: {fileID: 9220745225293107898}
   m_Layer: 0
   m_Name: RodDown
   m_TagString: Untagged
@@ -450,6 +451,22 @@ PolygonCollider2D:
       - {x: 0.92343384, y: -3.721191}
       - {x: 0.33668125, y: -0.9699811}
       - {x: -0.39923954, y: -0.95410126}
+--- !u!58 &9220745225293107898
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328400121830336994}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -3.5}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &5535392510073422285
 GameObject:
   m_ObjectHideFlags: 0

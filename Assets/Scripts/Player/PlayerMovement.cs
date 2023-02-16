@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //public int RandNum;
 
     public enum PlayerState
     {
@@ -14,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
         attack,
         fishing
     }
+
+    //public Collider baitCollider;
 
     public PlayerState currentState;
 
@@ -26,20 +27,19 @@ public class PlayerMovement : MonoBehaviour
 
     public VectorValue startingPosition;
 
-    // Runs on the first frame
     void Start()
     {
         moveSpeed = 5f;
         currentState = PlayerState.walk;
         transform.position = startingPosition.initialValue;
         velocity = Vector2.down;
+        //baitCollider = GetComponent<Collider>();
+        //print(baitCollider);
     }
 
-    // Runs on every frame
     void Update()
     {
-        //RandNum = Random.Range(-1, 2);
-        //Debug.Log(RandNum);
+
         if (currentState == PlayerState.interact)
         {
             return;
@@ -122,6 +122,10 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 0;
         currentState = PlayerState.fishing;
         yield return null;
+        PolygonCollider2D checkWater = GetComponentInChildren<PolygonCollider2D>();
+        CircleCollider2D baitCollider = GetComponentInChildren<CircleCollider2D>();
+        checkWater.enabled = false;
+        baitCollider.enabled = true;
     }
 
     private IEnumerator ExitFishing()
@@ -130,6 +134,8 @@ public class PlayerMovement : MonoBehaviour
         moveSpeed = 5f;
         currentState = PlayerState.walk;
         yield return null;
+        PolygonCollider2D checkWater = GetComponentInChildren<PolygonCollider2D>();
+        checkWater.enabled = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
