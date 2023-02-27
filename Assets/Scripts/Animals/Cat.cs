@@ -91,8 +91,12 @@ public class Cat : Animal
             }
         }
         catWalk(direction);
-        //animator.SetFloat("LastHorizontal", direction.x);
-        //animator.SetFloat("LastVertical", direction.y);
+        if (direction.x == 1 || direction.x == -1 || direction.y == 1 || direction.y == -1)
+        {
+            animator.SetFloat("LastHorizontal", direction.x);
+            animator.SetFloat("LastVertical", direction.y);
+        }
+        
         //print(direction);
     }
 

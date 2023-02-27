@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class npcTest : NPC
 {
+    [SerializeField] Dialogue dialogue;
 
     public Transform[] moveSpot;
     private int randomSpot;
     public float waitTime;
     public float startWaitTime;
 
-    // Start is called before the first frame update
+    //public void Interact()
+    //{
+    //    DialogueManager.Instance.ShowDialogue();
+    //}
+
     void Start()
     {
         randomSpot = Random.Range(0, moveSpot.Length);

@@ -17,7 +17,7 @@ public class Sign : MonoBehaviour
         if(collision.CompareTag("Player")) 
         {
             playerInRange = true;
-            Debug.Log("Player in range");
+            //Debug.Log("Player in range");
         }
     }
 
@@ -27,7 +27,7 @@ public class Sign : MonoBehaviour
         {
             playerInRange = false;
             dialogBox.SetActive(false);
-            Debug.Log("Player left range");
+            //Debug.Log("Player left range");
         }
     }
 

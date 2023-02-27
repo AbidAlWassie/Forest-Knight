@@ -5,7 +5,6 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public float moveSpeed;
-    public string name;
 
     public Transform target;
 

@@ -14114,13 +14114,14 @@ GameObject:
   - component: {fileID: 266059168}
   - component: {fileID: 266059167}
   - component: {fileID: 266059166}
+  - component: {fileID: 266059169}
   m_Layer: 0
   m_Name: NPC Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &266059166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14133,12 +14134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7bd1ecbe44e97b4896e8f454e27f6dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 2
   name: 
   target: {fileID: 0}
   animator: {fileID: 0}
   rb: {fileID: 0}
   movement: {x: 0, y: 0}
+  dialogue: {fileID: 0}
   moveSpot:
   - {fileID: 428401938}
   - {fileID: 1157002850}
@@ -14216,6 +14218,19 @@ Transform:
   m_Father: {fileID: 795201661}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266059169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266059165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886b0a90aec114b498d9058979bbd777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines: []
 --- !u!1 &309949167
 GameObject:
   m_ObjectHideFlags: 0
@@ -104990,6 +105005,22 @@ PrefabInstance:
       propertyPath: m_Colors.m_PressedColor.r
       value: 0.7176471
       objectReference: {fileID: 0}
+    - target: {fileID: 1289904769058962411, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1700
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289904769058962411, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289904769058962411, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289904769058962411, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2457163590822290848, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -105240,7 +105271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4102654935820298667, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4102654935820298670, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_Name
@@ -105398,6 +105429,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6839275296382229389, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1800
+      objectReference: {fileID: 0}
     - target: {fileID: 7126044545068244825, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -105426,9 +105461,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8773585
       objectReference: {fileID: 0}
+    - target: {fileID: 7905471536854205747, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7953046018859483390, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717172665929166619, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8804446645804101039, guid: 9aa14136da53ac947a95162455bc149b, type: 3}
       propertyPath: m_Sprite
