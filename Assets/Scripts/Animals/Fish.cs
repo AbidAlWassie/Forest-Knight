@@ -69,6 +69,8 @@ public class Fish : MonoBehaviour
                 //Debug.Log("Fish going right " + Vector2.right);
             }
             //velocity = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        } else if (collision.CompareTag("FishingRod")) {
+            print("Entered Fishing State");
         }
     }
 
