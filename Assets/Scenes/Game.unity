@@ -14135,7 +14135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  name: 
   target: {fileID: 0}
   animator: {fileID: 0}
   rb: {fileID: 0}
@@ -104665,6 +104664,14 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1389252276856418972, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328400121830336994, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5518554543995148052, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: 1.138333
@@ -104776,6 +104783,14 @@ PrefabInstance:
     - target: {fileID: 6664090031478828664, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
       value: 0.88359284
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924446917217050998, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7924446917217050998, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}
+      propertyPath: m_TagString
+      value: FishingRod
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ed96dc4490af741895e60fd8e602b1, type: 3}

@@ -8,6 +8,7 @@ TagManager:
   - Heal
   - Breakable
   - Water
+  - FishingRod
   layers:
   - Default
   - TransparentFX
